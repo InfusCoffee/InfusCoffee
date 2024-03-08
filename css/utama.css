@@ -1,3 +1,4 @@
+
 :root {
   --primary: #b6895b;
   --bg: #010101;
@@ -167,6 +168,98 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
+@keyframes glowWA {
+  0% {
+    box-shadow: 0 0 0 0 rgba(18,140,126, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 10px 2.5px rgba(18,140,126, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(18,140,126, 0.7);
+  }
+}
+@keyframes glowgrabfood {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  }
+  50% {
+    box-shadow: 0 0 10px 2.5px rgb(249, 249, 249);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  }
+}
+@keyframes glowgofood {
+  0% {
+    box-shadow: 0 0 0 0 rgba(18,140,126, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 10px 2.5px rgba(18,140,126, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(18,140,126, 0.7);
+  }
+}
+
+.warnawhatsapp {
+  font-family: Helvetica;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(18,140,126) 0%,
+    rgba(37,211,102) 34%,
+    rgba(220,248,198) 109%,
+    rgba(220,248,198) 99%
+  );
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 20px 10px rgba(18,140,126, 0.7); /* Inner glow */
+  animation: glowWA 1.5s infinite linear;
+}
+
+.warnagrabfood {
+  font-family: Helvetica;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(18,140,126) 0%,
+    rgba(37,211,102) 34%,
+    rgba(0,177,79) 109%,
+    rgba(220,248,198) 99%
+  );
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 20px 10px rgba(250, 250, 250, 0.7); /* Inner glow */
+  animation: glowgrabfood 1.5s infinite linear;
+}
+
+
+
+ .warnagofood {
+  font-family: Helvetica;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: linear-gradient(
+    90deg,
+    rgba(18,140,126) 0%,
+    rgba(37,211,102) 34%,
+    rgba(220,248,198) 109%,
+    rgba(220,248,198) 99%
+  );
+  border-radius: 0.5rem;
+  box-shadow: -1.4px -1.4px 13px rgba(18,140,126);
+}
+
 /* About Section */
 
 .about,
@@ -264,7 +357,7 @@ body {
   justify-content: center;
 }
 
-.menu .row .menu-card {
+.menu .row .menu-card   {
   text-align: center;
   padding-bottom: 4rem;
 }
@@ -277,6 +370,15 @@ body {
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.5rem;
 }
+
+.menu-list img{
+  margin-top: 1.5rem;
+  width: 80%;
+  padding-left: 200px;
+  /* margin-left: 100px;
+  margin-top: 2px; */
+}
+
 
 /* Contact Section */
 
@@ -396,7 +498,7 @@ body {
   display: inline-block;
   margin-right: 20px;
   vertical-align: top;
-  width: 250px;
+  width: 220px;
 }
 
 .event-list li:last-child {
@@ -608,7 +710,43 @@ footer a {
   color: #fff;
 }
 
+/* Tes Bouncing */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#polygon1 {
+  animation: bounce 1s infinite alternate, spin 1s infinite linear;
+  background: linear-gradient(to right, rgb(22, 113, 202) 50%, transparent 50%);
+}
+
+#polygon1:before {
+  display: block;
+  content: '';
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background: #222;
+  border-radius: 50%;
+}
+
+#polygon2 {
+  animation: bounce 1s infinite alternate 0.5s;
+}
 
 
 /* Device nya */
